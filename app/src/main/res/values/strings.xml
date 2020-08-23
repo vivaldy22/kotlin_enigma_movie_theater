@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">enigma_movie_theater</string>
+    <string name="menu_item_show_movies">Show Movies</string>
+    <string name="menu_item_create_movie">Create Movie</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
