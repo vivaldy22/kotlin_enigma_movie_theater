@@ -29,13 +29,7 @@ class MovieGridFragment : Fragment() {
 
         movieViewModel.getAllMovies()
 
-//        grid_view_movies.numColumns = 2
-//        grid_view_movies.horizontalSpacing = 15
-//        grid_view_movies.verticalSpacing = 15
-//        grid_view_movies.stretchMode = GridView.STRETCH_COLUMN_WIDTH
-
         movieViewModel.movies.observe(viewLifecycleOwner, Observer {
-//            (grid_view_movies.adapter as MovieGridAdapter).notifyDataSetChanged()
             grid_view_movies.adapter = MovieGridAdapter(it)
         })
     }

@@ -11,6 +11,7 @@ import androidx.navigation.Navigation
 import com.example.enigma_movie_theater.R
 import com.example.enigma_movie_theater.domains.movie.Movie
 import com.example.enigma_movie_theater.domains.movie.MovieViewModel
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_movie_add.*
 
 class MovieAddFragment : Fragment() {

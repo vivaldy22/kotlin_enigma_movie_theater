@@ -1,11 +1,13 @@
 package com.example.enigma_movie_theater.domains.movie
 
 import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
+import androidx.navigation.Navigation
 import com.example.enigma_movie_theater.R
 import com.squareup.picasso.Picasso
 
@@ -32,9 +34,14 @@ class MovieGridAdapter(private val moviesList: List<Movie>, private val context:
         Picasso.get().load(moviesList[position].image_url).into(movieCover)
 
         movieCover.setOnClickListener {
-            println("${moviesList[position].title}. CLICKED")
-//            Navigation.findNavController(it)
-//                .navigate()
+            val item = moviesList[position]
+            val bundle = Bundle()
+            bundle.putString("imageUrl", item.image_url)
+            bundle.putInt("duration", item.duration)
+            bundle.putString("synopsis", item.synopsis)
+
+            Navigation.findNavController(it)
+                .navigate(R.id.action_to_fragment_movie_detail, bundle)
         }
 
         return view!!

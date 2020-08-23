@@ -10,4 +10,6 @@
     <string name="hint_input_synopsis">Synopsis</string>
     <string name="btn_submit">SUBMIT</string>
     <string name="hint_input_image_url">Image URL</string>
+    <string name="template_duration_130_min">130 Min</string>
+    <string name="some_synopsis">Some synopsis</string>
 </resources>
