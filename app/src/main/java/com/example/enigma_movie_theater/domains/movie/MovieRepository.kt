@@ -14,6 +14,7 @@ class MovieRepository(private val movieAPI: MovieAPI) {
         movieAPI.getAllMovies().enqueue(object : Callback<List<Movie>> {
             override fun onResponse(call: Call<List<Movie>>, response: Response<List<Movie>>) {
                 movies.value = response.body()
+                println("HASIL ${movies.value}")
             }
 
             override fun onFailure(call: Call<List<Movie>>, t: Throwable) {

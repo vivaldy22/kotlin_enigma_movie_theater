@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_main">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/movieGridFragment">
 
+    <action
+        android:id="@+id/action_to_fragment_movie_grid"
+        app:destination="@+id/movieGridFragment"/>
+
+    <action
+        android:id="@+id/action_to_fragment_movie_add"
+        app:destination="@+id/movieAddFragment"/>
+
+    <fragment
+        android:id="@+id/movieGridFragment"
+        android:name="com.example.enigma_movie_theater.domains.movie.screen.MovieGridFragment"
+        android:label="fragment_movie_grid"
+        tools:layout="@layout/fragment_movie_grid" />
+    <fragment
+        android:id="@+id/movieAddFragment"
+        android:name="com.example.enigma_movie_theater.domains.movie.screen.MovieAddFragment"
+        android:label="fragment_movie_add"
+        tools:layout="@layout/fragment_movie_add">
+        <action
+            android:id="@+id/action_movieAddFragment_pop"
+            app:popUpTo="@id/movieAddFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
